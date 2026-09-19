@@ -634,7 +634,7 @@ Parser memberAccess() {
 }
 
 Parser arrayAccess() =>
-    seq4(ref0(identifier), char('['), ref0(literal), char(']'))
+    seq4(ref0(identifier), char('['), ref0(expression), char(']'))
         .map((array) {
           return ArrayAccess(array.$1, array.$3);
         })
